@@ -28,9 +28,11 @@ def run(day = 1, test = 3, debug = False):
     
 def runTest(daynum,testnum,debug):
     global day_module
-    ab = "A" if testnum==1 else "B"
+    ab = "A" if testnum==1 or day_module.singleInput else "B"
+    ab_debug = "A" if testnum==1 or day_module.singleDebugInput else "B"
     isDebug = "_debug" if debug else ""
-    inputFileName = "Days\Day{}\Input\{}{}.txt".format(daynum,ab,isDebug)
+
+    inputFileName = "Days\Day{}\Input\{}{}.txt".format(daynum,ab_debug if isDebug else ab,isDebug)
     print(inputFileName)
 
     with open(inputFileName) as f:

@@ -1,5 +1,7 @@
 # https://adventofcode.com/2022/day/1
 
+singleInput = False
+singleDebugInput = True
 lines = "test"
 
 def A():
