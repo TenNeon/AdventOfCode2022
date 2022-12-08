@@ -1,8 +1,10 @@
 # https://adventofcode.com/2022/day/1
-
+# run(1,1,True)
 singleInput = False
 singleDebugInput = True
 lines = "test"
+
+import util
 
 def A():
     print("A")

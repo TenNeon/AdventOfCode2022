@@ -5,12 +5,16 @@ import importlib.util
 import shutil
 import os
 
+import aocutil as util
+
 # imp.reload(foo)
 
 day_module = ""
 
 def run(day = 1, test = 3, debug = False):
     global day_module
+    util.isDebug = debug
+
     print("Running day {} ({}) {}".format(day, test, "(debug)" if (debug) else "" ))
     name = "Days/Day{}/Day{}.py".format(day,day) 
     
@@ -25,7 +29,7 @@ def run(day = 1, test = 3, debug = False):
         runTest(day,2,debug)
     else:
         runTest(day,test,debug)
-    
+
 def runTest(daynum,testnum,debug):
     global day_module
     ab = "A" if testnum==1 or day_module.singleInput else "B"
